@@ -62,14 +62,6 @@ def main():
     load_data(directory)
     print("Data loaded.")
 
-    # print(names)
-    # print('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
-    # print(people)
-    # print('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
-    # for i in movies.keys():
-    #     print(movies[i]['stars'])
-
-
     source = person_id_for_name(input("Name: "))
     if source is None:
         sys.exit("Person not found.")
@@ -131,8 +123,6 @@ def shortest_path(source, target):
             if state not in explored:
                 child = Node(state=state, parent=node, action=action)
                 frontier.add(child)
-
-
 
 
 def person_id_for_name(name):
